@@ -2,3 +2,35 @@
 
 == DOC-01
 xref:doc-01.adoc[doc-01]
+
+== Erstellen des Client-Containers
+Create VM
+Image: Lubuntu-Template ISO (lubuntu-22.10-desktop-amd64.iso)
+
+System dimensionierung festlegen.
+
+[source, bash]
+----
+sudo apt-get update
+sudo apt upgrade
+sudo apt-get install xrdp
+----
+
+== Erstellen des DNS-AdBlockers
+* ``Create CT`` klicken
+* Konfigurieren
+** Node -> pve01
+** CT_ID -> 7141
+** Hostname -> dns-adblock
+** Resource Pool -> it200308
+** Password -> <ausgewählt>
+** SSH public key -> <geuploaded>
+** Netzwerk ->
+*** IP -> 10.9.7.19/28
+*** Gateway -> 10.9.7.17
+* Einloggen per root login
+* Erstellen eines neuen users
+** User: MaMi
+** ``sudo adduser <username>``
+
+
