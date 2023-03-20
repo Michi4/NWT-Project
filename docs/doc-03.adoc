@@ -1,0 +1,9 @@
+= GH_Pages-AutoPublish doc-03
+
+== 13.03.2023
+xref:index.adoc[index]
+
+'''
+
+* Fertigstellung der Generation der Dokumentation
+** Auffüllen der Dokumentation mit Inhalten der letzten Male

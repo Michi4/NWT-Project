@@ -1,0 +1,14 @@
+= GH_Pages-AutoPublish doc-02
+
+== 13.03.2023
+xref:index.adoc[index]
+
+'''
+
+* Initialisierung des GitHub repositories
+
+* Erstellung eines GitHub workflows
+
+* Versuch GH-Pages zu konfigurieren
+
+* Der Versuch war leider nicht Erfolgreich
