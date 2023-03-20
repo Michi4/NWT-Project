@@ -1,8 +1,5 @@
 = GH_Pages-AutoPublish docs-index
 
-== DOC-01
-xref:doc-01.adoc[doc-01]
-xref:doc-02.adoc[doc-02]
-
-
-
+ * xref:doc-01.adoc[doc-01]
+ * xref:doc-02.adoc[doc-02]
+ * xref:doc-03.adoc[doc-03]
