@@ -3,7 +3,7 @@
 == 06.03.2023
 xref:index.adoc[index]
 
-== Erstellen des Client-Containers
+== Erstellen des Desktop-Clients
 Create VM
 Image: Lubuntu-Template ISO (lubuntu-22.10-desktop-amd64.iso)
 
