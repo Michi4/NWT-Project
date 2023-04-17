@@ -63,11 +63,12 @@ System dimensionierung festlegen.
 
 Die VM zum Internet verbinden:
 
-- VM auswählen
+- go ot your VM
 - Hardware Tab
-- add Network Device oder bearbeiten und richtige bridge auswählen
+- add Network Device or edit one and choose the right vmbridge
 
-Then go to Networksettings on the Desktop. +
+Then on the Desktop search for Settings.
+Next go to Advanced Networkconfiguartion and set it to manual +
 Add: IP, Mask, Gateway
 
 XRDP einrichten:
