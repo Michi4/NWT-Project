@@ -119,3 +119,57 @@ sudo apt-get install xrdp
 * Erstellen eines neuen users
 ** User: MaMi
 ** ``sudo adduser <username>``
+
+
+# Erstellen des Webserver
+
+@Manuel Puchner
+
+- `Create CT` klicken
+- Konfigurieren
+- Node: pve01
+- CT ID: 7143
+- Hostname: webserver
+- Resource Pool: it200308
+- Password: <ausgewählt>
+- Netzwerk:
+- Bridge: vmbr7
+- IP: 10.9.7.18/28
+- Gateway: 10.9.7.17
+- Einloggen per root login
+- Erstellen eines neuen users
+- Username: me
+- `sudo adduser me`
+- installieren von nginx
+- Installation: `sudo apt install nginx`
+- Status überprüfen: `sudo systemctl status nginx`
+- Nginx starten: `sudo systemctl start nginx`
+- Nginx neustarten: `sudo systemctl restart nginx`
+- Website dann erreichbar unter [http://10.9.7.18:80](http://10.9.7.18/)
+
+# Erstellen des Proxy-Servers
+
+[How To Set Up & Install Squid Proxy Server on Ubuntu 18.04](https://phoenixnap.com/kb/setup-install-squid-proxy-server-ubuntu)
+
+@Manuel Puchner
+
+- `Create CT` klicken
+- Konfigurieren
+- Node: pve01
+- CT ID: 7144
+- Hostname: proxy
+- Resource Pool: it200308
+- Password: <ausgewählt>
+- Netzwerk:
+- Bridge: vmbr7
+- IP: 10.9.7.21/28
+- Gateway: 10.9.7.17
+- Einloggen per root login
+- Erstellen eines neuen users
+- Username: me
+- `sudo adduser me`
+- Updaten
+- `sudo apt update`
+- `sudo apt upgrade`
+- Squid installieren
+- `sudo apt install squid`
