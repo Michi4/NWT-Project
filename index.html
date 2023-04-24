@@ -566,6 +566,8 @@ pre.rouge .gs {
 </li>
 <li><a href="#_erstellen_des_desktop_clients">2. Erstellen des Desktop-Clients</a></li>
 <li><a href="#_erstellen_des_dns_adblockers">3. Erstellen des DNS-AdBlockers</a></li>
+<li><a href="#_erstellen_des_webserver">Erstellen des Webserver</a></li>
+<li><a href="#_erstellen_des_proxy_servers">Erstellen des Proxy-Servers</a></li>
 </ul>
 </div>
 </div>
@@ -812,10 +814,152 @@ Add: IP, Mask, Gateway</p>
 </div>
 </div>
 </div>
+<h1 id="_erstellen_des_webserver" class="sect0"><a class="anchor" href="#_erstellen_des_webserver"></a>Erstellen des Webserver</h1>
+<div class="paragraph">
+<p>@Manuel Puchner</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Create CT</code> klicken</p>
+</li>
+<li>
+<p>Konfigurieren</p>
+</li>
+<li>
+<p>Node: pve01</p>
+</li>
+<li>
+<p>CT ID: 7143</p>
+</li>
+<li>
+<p>Hostname: webserver</p>
+</li>
+<li>
+<p>Resource Pool: it200308</p>
+</li>
+<li>
+<p>Password: &lt;ausgewählt&gt;</p>
+</li>
+<li>
+<p>Netzwerk:</p>
+</li>
+<li>
+<p>Bridge: vmbr7</p>
+</li>
+<li>
+<p>IP: 10.9.7.18/28</p>
+</li>
+<li>
+<p>Gateway: 10.9.7.17</p>
+</li>
+<li>
+<p>Einloggen per root login</p>
+</li>
+<li>
+<p>Erstellen eines neuen users</p>
+</li>
+<li>
+<p>Username: me</p>
+</li>
+<li>
+<p><code>sudo adduser me</code></p>
+</li>
+<li>
+<p>installieren von nginx</p>
+</li>
+<li>
+<p>Installation: <code>sudo apt install nginx</code></p>
+</li>
+<li>
+<p>Status überprüfen: <code>sudo systemctl status nginx</code></p>
+</li>
+<li>
+<p>Nginx starten: <code>sudo systemctl start nginx</code></p>
+</li>
+<li>
+<p>Nginx neustarten: <code>sudo systemctl restart nginx</code></p>
+</li>
+<li>
+<p>Website dann erreichbar unter [<a href="http://10.9.7.18:80" class="bare">http://10.9.7.18:80</a>](<a href="http://10.9.7.18/" class="bare">http://10.9.7.18/</a>)</p>
+</li>
+</ul>
+</div>
+<h1 id="_erstellen_des_proxy_servers" class="sect0"><a class="anchor" href="#_erstellen_des_proxy_servers"></a>Erstellen des Proxy-Servers</h1>
+<div class="paragraph">
+<p>[How To Set Up &amp; Install Squid Proxy Server on Ubuntu 18.04](<a href="https://phoenixnap.com/kb/setup-install-squid-proxy-server-ubuntu" class="bare">https://phoenixnap.com/kb/setup-install-squid-proxy-server-ubuntu</a>)</p>
+</div>
+<div class="paragraph">
+<p>@Manuel Puchner</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Create CT</code> klicken</p>
+</li>
+<li>
+<p>Konfigurieren</p>
+</li>
+<li>
+<p>Node: pve01</p>
+</li>
+<li>
+<p>CT ID: 7144</p>
+</li>
+<li>
+<p>Hostname: proxy</p>
+</li>
+<li>
+<p>Resource Pool: it200308</p>
+</li>
+<li>
+<p>Password: &lt;ausgewählt&gt;</p>
+</li>
+<li>
+<p>Netzwerk:</p>
+</li>
+<li>
+<p>Bridge: vmbr7</p>
+</li>
+<li>
+<p>IP: 10.9.7.21/28</p>
+</li>
+<li>
+<p>Gateway: 10.9.7.17</p>
+</li>
+<li>
+<p>Einloggen per root login</p>
+</li>
+<li>
+<p>Erstellen eines neuen users</p>
+</li>
+<li>
+<p>Username: me</p>
+</li>
+<li>
+<p><code>sudo adduser me</code></p>
+</li>
+<li>
+<p>Updaten</p>
+</li>
+<li>
+<p><code>sudo apt update</code></p>
+</li>
+<li>
+<p><code>sudo apt upgrade</code></p>
+</li>
+<li>
+<p>Squid installieren</p>
+</li>
+<li>
+<p><code>sudo apt install squid</code></p>
+</li>
+</ul>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-04-24 13:46:34 UTC
+Last updated 2023-04-24 14:13:20 UTC
 </div>
 </div>
 </body>
