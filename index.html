@@ -561,6 +561,7 @@ pre.rouge .gs {
 <li><a href="#_erstellen_des_routers">1. Erstellen des Routers</a>
 <ul class="sectlevel3">
 <li><a href="#_gluenet_initialisieren">1.1. Gluenet initialisieren:</a></li>
+<li><a href="#_remote_desktop">1.2. Remote Desktop</a></li>
 </ul>
 </li>
 <li><a href="#_erstellen_des_desktop_clients">2. Erstellen des Desktop-Clients</a></li>
@@ -622,7 +623,7 @@ nano sysctl <span class="nb">.</span> conf</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="bash">net. ipv4. ip forward</code></pre>
+<pre class="rouge highlight"><code data-lang="bash">net.ipv4.ip_forward <span class="o">=</span> 1</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -658,6 +659,47 @@ nano sysctl <span class="nb">.</span> conf</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="bash">iptables <span class="nt">-A</span> OUTPUT <span class="nt">-j</span> ACCEPT</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_remote_desktop"><a class="anchor" href="#_remote_desktop"></a>1.2. Remote Desktop</h4>
+<div class="paragraph">
+<p>install xrdp server:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="bash"><span class="nb">sudo </span>apt <span class="nb">install </span>xrdp
+<span class="nb">sudo </span>systemctl <span class="nb">enable </span>xrdp</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="bash"><span class="nb">sudo </span>nano /etc/xrdp/startwm.sh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and then add</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="bash">lxsession <span class="nt">-s</span> Lubuntu <span class="nt">-e</span> LXDE</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally restart xprdp:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="bash"><span class="nb">sudo</span> /etc/init.d/xrdp restart</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you just have to create a userpassword</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="bash"><span class="nb">sudo </span>passwd client</code></pre>
 </div>
 </div>
 </div>
@@ -773,7 +815,7 @@ Add: IP, Mask, Gateway</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-04-17 14:18:43 UTC
+Last updated 2023-04-24 13:46:34 UTC
 </div>
 </div>
 </body>
