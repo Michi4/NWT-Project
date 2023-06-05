@@ -1,8 +1,5 @@
-ifndef::
-
-dir[:imagesdir: images]
-
 = NWT-Projekt
+ifndef::dir[:imagesdir: images]
 
 == Network Structure
 
