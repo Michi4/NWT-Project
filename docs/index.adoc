@@ -1,9 +1,8 @@
-= GH_Pages-AutoPublish docs-index
+= NWT-Projekt
 
- * xref:doc-01.adoc[doc-01]
- * xref:doc-02.adoc[doc-02]
- * xref:doc-03.adoc[doc-03]
+== Network Structure
 
+image:images/NetworkStructure.png[]
 
 == Erstellen des Routers
 
@@ -121,7 +120,7 @@ sudo apt-get install xrdp
 ** ``sudo adduser <username>``
 
 
-# Erstellen des Webserver
+## Erstellen des Webserver
 
 @Manuel Puchner
 
@@ -147,7 +146,7 @@ sudo apt-get install xrdp
 - Nginx neustarten: `sudo systemctl restart nginx`
 - Website dann erreichbar unter [http://10.9.7.18:80](http://10.9.7.18/)
 
-# Erstellen des Proxy-Servers
+## Erstellen des Proxy-Servers
 
 [How To Set Up & Install Squid Proxy Server on Ubuntu 18.04](https://phoenixnap.com/kb/setup-install-squid-proxy-server-ubuntu)
 
@@ -173,3 +172,6 @@ sudo apt-get install xrdp
 - `sudo apt upgrade`
 - Squid installieren
 - `sudo apt install squid`
+
+### Proxy Connetction Settings
+image:images/ProxySettings.png[]
