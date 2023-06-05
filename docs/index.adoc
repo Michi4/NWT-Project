@@ -1,8 +1,12 @@
+ifndef::
+
+dir[:imagesdir: images]
+
 = NWT-Projekt
 
 == Network Structure
 
-image:images/NetworkStructure.png[]
+image:NetworkStructure.png[]
 
 == Erstellen des Routers
 
@@ -15,7 +19,7 @@ Netzwerk einrichten:
 - Network Tab
 - add Network Device
 
-image:images/NetworkSettingsRouter.png[]
+image:NetworkSettingsRouter.png[]
 
 In den Container einloggen, eventuell SSH installieren
 
@@ -174,4 +178,4 @@ sudo apt-get install xrdp
 - `sudo apt install squid`
 
 ### Proxy Connetction Settings
-image:images/ProxySettings.png[]
+image:ProxySettings.png[]
