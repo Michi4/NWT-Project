@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.18">
+<meta name="generator" content="Asciidoctor 2.0.20">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>GH_Pages-AutoPublish docs-index</title>
+<title>NWT-Projekt</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -209,13 +209,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -394,7 +391,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -554,43 +551,39 @@ pre.rouge .gs {
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>GH_Pages-AutoPublish docs-index</h1>
+<h1>NWT-Projekt</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_erstellen_des_routers">1. Erstellen des Routers</a>
+<li><a href="#_network_structure">1. Network Structure</a></li>
+<li><a href="#_erstellen_des_routers">2. Erstellen des Routers</a>
 <ul class="sectlevel3">
-<li><a href="#_gluenet_initialisieren">1.1. Gluenet initialisieren:</a></li>
-<li><a href="#_remote_desktop">1.2. Remote Desktop</a></li>
+<li><a href="#_gluenet_initialisieren">2.1. Gluenet initialisieren:</a></li>
+<li><a href="#_remote_desktop">2.2. Remote Desktop</a></li>
 </ul>
 </li>
-<li><a href="#_erstellen_des_desktop_clients">2. Erstellen des Desktop-Clients</a></li>
-<li><a href="#_erstellen_des_dns_adblockers">3. Erstellen des DNS-AdBlockers</a></li>
-<li><a href="#_erstellen_des_webserver">Erstellen des Webserver</a></li>
-<li><a href="#_erstellen_des_proxy_servers">Erstellen des Proxy-Servers</a></li>
+<li><a href="#_erstellen_des_desktop_clients">3. Erstellen des Desktop-Clients</a></li>
+<li><a href="#_erstellen_des_dns_adblockers">4. Erstellen des DNS-AdBlockers</a></li>
+<li><a href="#_erstellen_des_webserver">5. Erstellen des Webserver</a></li>
+<li><a href="#_erstellen_des_proxy_servers">6. Erstellen des Proxy-Servers</a>
+<ul class="sectlevel2">
+<li><a href="#_proxy_connetction_settings">6.1. Proxy Connetction Settings</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="_network_structure"><a class="anchor" href="#_network_structure"></a>1. Network Structure</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="doc-01.html">doc-01</a></p>
-</li>
-<li>
-<p><a href="doc-02.html">doc-02</a></p>
-</li>
-<li>
-<p><a href="doc-03.html">doc-03</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p><span class="image"><img src="images/images/NetworkStructure.png" alt="NetworkStructure"></span></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_erstellen_des_routers"><a class="anchor" href="#_erstellen_des_routers"></a>1. Erstellen des Routers</h2>
+<h2 id="_erstellen_des_routers"><a class="anchor" href="#_erstellen_des_routers"></a>2. Erstellen des Routers</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Create CT (da dieser leichtgewichtiger ist)<br>
@@ -610,7 +603,7 @@ System Dimensionierung festlegen</p>
 <p>In den Container einloggen, eventuell SSH installieren</p>
 </div>
 <div class="sect3">
-<h4 id="_gluenet_initialisieren"><a class="anchor" href="#_gluenet_initialisieren"></a>1.1. Gluenet initialisieren:</h4>
+<h4 id="_gluenet_initialisieren"><a class="anchor" href="#_gluenet_initialisieren"></a>2.1. Gluenet initialisieren:</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="bash"><span class="nb">sudo </span>apt-get update
@@ -665,7 +658,7 @@ nano sysctl <span class="nb">.</span> conf</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_remote_desktop"><a class="anchor" href="#_remote_desktop"></a>1.2. Remote Desktop</h4>
+<h4 id="_remote_desktop"><a class="anchor" href="#_remote_desktop"></a>2.2. Remote Desktop</h4>
 <div class="paragraph">
 <p>install xrdp server:</p>
 </div>
@@ -708,7 +701,7 @@ nano sysctl <span class="nb">.</span> conf</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_erstellen_des_desktop_clients"><a class="anchor" href="#_erstellen_des_desktop_clients"></a>2. Erstellen des Desktop-Clients</h2>
+<h2 id="_erstellen_des_desktop_clients"><a class="anchor" href="#_erstellen_des_desktop_clients"></a>3. Erstellen des Desktop-Clients</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Create VM<br>
@@ -749,7 +742,7 @@ Add: IP, Mask, Gateway</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_erstellen_des_dns_adblockers"><a class="anchor" href="#_erstellen_des_dns_adblockers"></a>3. Erstellen des DNS-AdBlockers</h2>
+<h2 id="_erstellen_des_dns_adblockers"><a class="anchor" href="#_erstellen_des_dns_adblockers"></a>4. Erstellen des DNS-AdBlockers</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -814,7 +807,9 @@ Add: IP, Mask, Gateway</p>
 </div>
 </div>
 </div>
-<h1 id="_erstellen_des_webserver" class="sect0"><a class="anchor" href="#_erstellen_des_webserver"></a>Erstellen des Webserver</h1>
+<div class="sect1">
+<h2 id="_erstellen_des_webserver"><a class="anchor" href="#_erstellen_des_webserver"></a>5. Erstellen des Webserver</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>@Manuel Puchner</p>
 </div>
@@ -885,7 +880,11 @@ Add: IP, Mask, Gateway</p>
 </li>
 </ul>
 </div>
-<h1 id="_erstellen_des_proxy_servers" class="sect0"><a class="anchor" href="#_erstellen_des_proxy_servers"></a>Erstellen des Proxy-Servers</h1>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_erstellen_des_proxy_servers"><a class="anchor" href="#_erstellen_des_proxy_servers"></a>6. Erstellen des Proxy-Servers</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>[How To Set Up &amp; Install Squid Proxy Server on Ubuntu 18.04](<a href="https://phoenixnap.com/kb/setup-install-squid-proxy-server-ubuntu" class="bare">https://phoenixnap.com/kb/setup-install-squid-proxy-server-ubuntu</a>)</p>
 </div>
@@ -956,10 +955,18 @@ Add: IP, Mask, Gateway</p>
 </li>
 </ul>
 </div>
+<div class="sect2">
+<h3 id="_proxy_connetction_settings"><a class="anchor" href="#_proxy_connetction_settings"></a>6.1. Proxy Connetction Settings</h3>
+<div class="paragraph">
+<p><span class="image"><img src="images/images/ProxySettings.png" alt="ProxySettings"></span></p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-04-24 14:13:20 UTC
+Last updated 2023-06-05 13:18:06 UTC
 </div>
 </div>
 </body>
