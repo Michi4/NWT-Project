@@ -954,6 +954,25 @@ Add: IP, Mask, Gateway</p>
 <li>
 <p><code>sudo apt install squid</code></p>
 </li>
+<li>
+<p>Squid configurieren (<code>/etc/squid/squid.conf</code>)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="bash">http_access allow all
+cache_dir ufs /var/spool/squid 100 16 256</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Squid neustarten</p>
+</li>
+<li>
+<p><code>systemctl restart squid</code></p>
+</li>
 </ul>
 </div>
 <div class="sect2">
@@ -1067,7 +1086,7 @@ Implementierung von Maßnahmen zur Gewährleistung der Datensicherheit und Daten
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-06-05 14:07:20 UTC
+Last updated 2023-06-05 14:15:22 UTC
 </div>
 </div>
 </body>
