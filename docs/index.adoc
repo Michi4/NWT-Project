@@ -183,3 +183,34 @@ cache_dir ufs /var/spool/squid 100 16 256
 
 ### Proxy Connetction Settings
 image:ProxySettings.png[]
+
+== FCAPS
+
+* Fault Management
+** Überwachung des gesamten Systems auf mögliche Störungen oder Ausfälle.
+** Fehlererkennung/Ursprung des Fehlers erkennen
+** Fehlerisolation und Fehlerbehebung
+
+* Configuration Management
+** Konfiguration der Komponenten entsprechend den Anforderungen.
+** Tägliche Backups von den Daten
+** Monatliche Backups von den Configurations Dateien
+
+* Accounting Management
+    
+** Netzwerkressourcennutzung und aktivitäten erfassen um ein effizientes System zu gewährleisten
+** Protokollierung von Ereignissen, um eine nachträgliche Analyse und Überprüfung zu ermöglichen.
+** Überwachung des Datenverkehrs, der Bandbreitennutzung und der Netzwerkleistung.
+** Analyse des Netzwerktraffics um die Effizient zu verbessern
+
+* Performance Management
+** Überwachung und Optimierung der Leistung der Netzwerkkomponenten.
+** Netzwerklatenz, Bandbreite, Auslastung und Paketverlust beobachten.
+** Uptime Robot Webserver
+*** Gibt Latenz, Ping, Uptime an.
+
+* Security Management
+    Implementierung von Maßnahmen zur Gewährleistung der Datensicherheit und Datenschutz.
+** Firewall einrichten, um das Netzwerk vor unbefugtem Zugriff und Bedrohungen zu schützen.
+** Monitoring Software einsetzen wie Nagios, ZABBIX, CHeckMK, ... einsetzen
+** Für die Überwachung der Netzwerksicherheit, Erkennung von Sicherheitsvorfällen und Durchführung von Sicherheitsaudits.
