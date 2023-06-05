@@ -173,6 +173,13 @@ sudo apt-get install xrdp
 - `sudo apt upgrade`
 - Squid installieren
 - `sudo apt install squid`
+- Squid configurieren (`/etc/squid/squid.conf`)
+```bash
+http_access allow all
+cache_dir ufs /var/spool/squid 100 16 256
+```
+- Squid neustarten
+- `systemctl restart squid`
 
 ### Proxy Connetction Settings
 image:ProxySettings.png[]
