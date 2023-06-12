@@ -57,11 +57,11 @@ iptables -A OUTPUT -j ACCEPT
 
 == Erstellen des Desktop-Clients
 
-===== Login
+==== Login
 - User: client
 - Password: PuRu123
 
-==== Installation
+=== Installation
 Create VM +
 Image: Lubuntu-Template ISO (lubuntu-22.10-desktop-amd64.iso) +
 System dimensionierung festlegen.
@@ -76,7 +76,7 @@ Then on the Desktop search for Settings.
 Next go to Advanced Networkconfiguartion and set it to manual +
 Add: IP, Mask, Gateway
 
-==== Remote Desktop
+=== Remote Desktop
 XRDP einrichten:
 install xrdp server:
 ```bash
