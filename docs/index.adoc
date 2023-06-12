@@ -30,27 +30,27 @@ cd /etc
 nano sysctl . conf
 ```
 
-Now add this statement into the file:
+Nun folgendes in das file schreiben:
 
 ```bash
 net.ipv4.ip_forward = 1
 ```
 
-Assuming your public interface is eth1 and local interface is eth0
+Unter annahme, dass das public interface eth2 und das locale eth0 ist
 
-2- Set natting the natting rule with:
+2- Natting Rule mit folgenden Command setzen:
 ```bash
 iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 ```
-3- Accept traffic from eth0:
+3- Traffic von eth0 aktzeptieren:
 ```bash
 iptables -A INPUT -i eth0 -j ACCEPT
 ```
-4- Allow established connections from the public interface.
+4- Verbindungsaufbau vom public interface erlauben:
 ```bash
 iptables -A INPUT -i eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
 ```
-5- Allow outgoing connections:
+5- Ausgehende Verbindungen erlauben:
 ```bash
 iptables -A OUTPUT -j ACCEPT
 ```
