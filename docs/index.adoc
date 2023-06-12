@@ -57,6 +57,10 @@ iptables -A OUTPUT -j ACCEPT
 
 ==== Remote Desktop
 
+===== Login
+- User: client
+- Password: PuRu123
+
 install xrdp server:
 ```bash
 sudo apt install xrdp
