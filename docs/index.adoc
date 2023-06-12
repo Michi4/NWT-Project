@@ -55,12 +55,29 @@ iptables -A INPUT -i eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A OUTPUT -j ACCEPT
 ```
 
-==== Remote Desktop
+== Erstellen des Desktop-Clients
 
 ===== Login
 - User: client
 - Password: PuRu123
 
+==== Installation
+Create VM +
+Image: Lubuntu-Template ISO (lubuntu-22.10-desktop-amd64.iso) +
+System dimensionierung festlegen.
+
+Die VM zum Internet verbinden:
+
+- go ot your VM
+- Hardware Tab
+- add Network Device or edit one and choose the right vmbridge
+
+Then on the Desktop search for Settings.
+Next go to Advanced Networkconfiguartion and set it to manual +
+Add: IP, Mask, Gateway
+
+==== Remote Desktop
+XRDP einrichten:
 install xrdp server:
 ```bash
 sudo apt install xrdp
@@ -83,29 +100,6 @@ Now you just have to create a userpassword
 sudo passwd client
 ```
 
-
-== Erstellen des Desktop-Clients
-Create VM +
-Image: Lubuntu-Template ISO (lubuntu-22.10-desktop-amd64.iso) +
-System dimensionierung festlegen.
-
-Die VM zum Internet verbinden:
-
-- go ot your VM
-- Hardware Tab
-- add Network Device or edit one and choose the right vmbridge
-
-Then on the Desktop search for Settings.
-Next go to Advanced Networkconfiguartion and set it to manual +
-Add: IP, Mask, Gateway
-
-XRDP einrichten:
-[source, bash]
-----
-sudo apt-get update
-sudo apt upgrade
-sudo apt-get install xrdp
-----
 
 == Erstellen des DNS-AdBlockers
 * ``Create CT`` klicken
