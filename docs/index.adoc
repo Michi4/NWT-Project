@@ -68,17 +68,17 @@ System dimensionierung festlegen.
 
 Die VM zum Internet verbinden:
 
-- go ot your VM
+- in Proxmox zur VM gehen
 - Hardware Tab
-- add Network Device or edit one and choose the right vmbridge
+- add Network Device oder bearbeiten und die richtige vmbridge wählen
 
-Then on the Desktop search for Settings.
-Next go to Advanced Networkconfiguartion and set it to manual +
+Am Desktop nach Einstellungen suchen.
+Advanced Networkconfiguartion und auf Manual setzen +
 Add: IP, Mask, Gateway
 
 === Remote Desktop
 XRDP einrichten:
-install xrdp server:
+xrdp server installieren:
 ```bash
 sudo apt install xrdp
 sudo systemctl enable xrdp
@@ -86,16 +86,16 @@ sudo systemctl enable xrdp
 ```bash
 sudo nano /etc/xrdp/startwm.sh
 ```
-and then add
+als nächstes hinzufügen:
 ```bash
 lxsession -s Lubuntu -e LXDE
 ```
-Finally restart xprdp:
+xrdp neustarten:
 ```bash
 sudo /etc/init.d/xrdp restart
 ```
 
-Now you just have to create a userpassword
+Passwort für den User definieren
 ```bash
 sudo passwd client
 ```
