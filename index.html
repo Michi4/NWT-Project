@@ -570,12 +570,13 @@ pre.rouge .gs {
 </li>
 <li><a href="#_erstellen_des_dns_adblockers">4. Erstellen des DNS-AdBlockers</a></li>
 <li><a href="#_erstellen_des_webserver">5. Erstellen des Webserver</a></li>
-<li><a href="#_erstellen_des_proxy_servers">6. Erstellen des Proxy-Servers</a>
+<li><a href="#_erstellen_des_proxy_servers">6. Erstellen des Proxy-Servers</a></li>
+<li><a href="#_erstellung_der_firewall">7. Erstellung der Firewall</a>
 <ul class="sectlevel2">
-<li><a href="#_proxy_connetction_settings">6.1. Proxy Connetction Settings</a></li>
+<li><a href="#_proxy_connetction_settings">7.1. Proxy Connetction Settings</a></li>
 </ul>
 </li>
-<li><a href="#_fcaps">7. FCAPS</a></li>
+<li><a href="#_fcaps">8. FCAPS</a></li>
 </ul>
 </div>
 </div>
@@ -987,8 +988,99 @@ cache_dir ufs /var/spool/squid 100 16 256</code></pre>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_erstellung_der_firewall"><a class="anchor" href="#_erstellung_der_firewall"></a>7. Erstellung der Firewall</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>Create VM</code> klicken</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Konfigurieren</p>
+</li>
+<li>
+<p>Node: pve01</p>
+</li>
+<li>
+<p>CT ID: 7145</p>
+</li>
+<li>
+<p>Hostname: firewall</p>
+</li>
+<li>
+<p>Storage: local</p>
+</li>
+<li>
+<p>ISO Image: OPNsense</p>
+</li>
+<li>
+<p>Type: Linux, Version 6.x - 2.6 Kernel</p>
+</li>
+<li>
+<p>Bridge: vmbr07</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Einloggen per root login</p>
+<div class="ulist">
+<ul>
+<li>
+<p>User: <code>root</code></p>
+</li>
+<li>
+<p>Password: <code>opnsense</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Set interface IP address</p>
+<div class="ulist">
+<ul>
+<li>
+<p>IP: <code>10.9.7.17</code></p>
+</li>
+<li>
+<p>Gateway: <code>10.9.7.254</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Web GUI</p>
+<div class="ulist">
+<ul>
+<li>
+<p>URL: <code><a href="http://10.9.7.17" class="bare">http://10.9.7.17</a></code></p>
+</li>
+<li>
+<p>Username: <code>root</code></p>
+</li>
+<li>
+<p>Password: <code>opnsense</code></p>
+</li>
+<li>
+<p>Setup Wizard befolgen</p>
+</li>
+<li>
+<p>DNS Server eintragen: <code>10.9.7.19</code></p>
+</li>
+<li>
+<p>Root Password: root</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 <div class="sect2">
-<h3 id="_proxy_connetction_settings"><a class="anchor" href="#_proxy_connetction_settings"></a>6.1. Proxy Connetction Settings</h3>
+<h3 id="_proxy_connetction_settings"><a class="anchor" href="#_proxy_connetction_settings"></a>7.1. Proxy Connetction Settings</h3>
 <div class="paragraph">
 <p><span class="image"><img src="images/ProxySettings.png" alt="ProxySettings"></span></p>
 </div>
@@ -996,7 +1088,7 @@ cache_dir ufs /var/spool/squid 100 16 256</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_fcaps"><a class="anchor" href="#_fcaps"></a>7. FCAPS</h2>
+<h2 id="_fcaps"><a class="anchor" href="#_fcaps"></a>8. FCAPS</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -1098,7 +1190,7 @@ Implementierung von Maßnahmen zur Gewährleistung der Datensicherheit und Daten
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-06-12 14:10:01 UTC
+Last updated 2023-06-19 12:48:42 UTC
 </div>
 </div>
 </body>
