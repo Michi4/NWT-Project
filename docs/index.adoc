@@ -30,34 +30,55 @@ cd /etc
 nano sysctl . conf
 ```
 
-Now add this statement into the file:
+Nun folgendes in das file schreiben:
 
 ```bash
 net.ipv4.ip_forward = 1
 ```
 
-Assuming your public interface is eth1 and local interface is eth0
+Unter annahme, dass das public interface eth2 und das locale eth0 ist
 
-2- Set natting the natting rule with:
+2- Natting Rule mit folgenden Command setzen:
 ```bash
 iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 ```
-3- Accept traffic from eth0:
+3- Traffic von eth0 aktzeptieren:
 ```bash
 iptables -A INPUT -i eth0 -j ACCEPT
 ```
-4- Allow established connections from the public interface.
+4- Verbindungsaufbau vom public interface erlauben:
 ```bash
 iptables -A INPUT -i eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
 ```
-5- Allow outgoing connections:
+5- Ausgehende Verbindungen erlauben:
 ```bash
 iptables -A OUTPUT -j ACCEPT
 ```
 
-==== Remote Desktop
+== Erstellen des Desktop-Clients
 
-install xrdp server:
+==== Login
+- User: client
+- Password: PuRu123
+
+=== Installation
+Create VM +
+Image: Lubuntu-Template ISO (lubuntu-22.10-desktop-amd64.iso) +
+System dimensionierung festlegen.
+
+Die VM zum Internet verbinden:
+
+- in Proxmox zur VM gehen
+- Hardware Tab
+- add Network Device oder bearbeiten und die richtige vmbridge wählen
+
+Am Desktop nach Einstellungen suchen.
+Advanced Networkconfiguartion und auf Manual setzen +
+Add: IP, Mask, Gateway
+
+=== Remote Desktop
+XRDP einrichten:
+xrdp server installieren:
 ```bash
 sudo apt install xrdp
 sudo systemctl enable xrdp
@@ -65,43 +86,20 @@ sudo systemctl enable xrdp
 ```bash
 sudo nano /etc/xrdp/startwm.sh
 ```
-and then add
+als nächstes hinzufügen:
 ```bash
 lxsession -s Lubuntu -e LXDE
 ```
-Finally restart xprdp:
+xrdp neustarten:
 ```bash
 sudo /etc/init.d/xrdp restart
 ```
 
-Now you just have to create a userpassword
+Passwort für den User definieren
 ```bash
 sudo passwd client
 ```
 
-
-== Erstellen des Desktop-Clients
-Create VM +
-Image: Lubuntu-Template ISO (lubuntu-22.10-desktop-amd64.iso) +
-System dimensionierung festlegen.
-
-Die VM zum Internet verbinden:
-
-- go ot your VM
-- Hardware Tab
-- add Network Device or edit one and choose the right vmbridge
-
-Then on the Desktop search for Settings.
-Next go to Advanced Networkconfiguartion and set it to manual +
-Add: IP, Mask, Gateway
-
-XRDP einrichten:
-[source, bash]
-----
-sudo apt-get update
-sudo apt upgrade
-sudo apt-get install xrdp
-----
 
 == Erstellen des DNS-AdBlockers
 * ``Create CT`` klicken
