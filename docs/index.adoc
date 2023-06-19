@@ -181,6 +181,30 @@ cache_dir ufs /var/spool/squid 100 16 256
 - Squid neustarten
 - `systemctl restart squid`
 
+## Erstellung der Firewall
+* `Create VM` klicken
+** Konfigurieren
+** Node: pve01
+** CT ID: 7145
+** Hostname: firewall
+** Storage: local
+** ISO Image: OPNsense
+** Type: Linux, Version 6.x - 2.6 Kernel
+** Bridge: vmbr07
+* Einloggen per root login
+** User: `root`
+** Password: `opnsense`
+* Set interface IP address
+** IP: `10.9.7.17`
+** Gateway: `10.9.7.254`
+* Web GUI
+** URL: `http://10.9.7.17`
+** Username: `root`
+** Password: `opnsense`
+** Setup Wizard befolgen
+** DNS Server eintragen: `10.9.7.19`
+** Root Password: root
+
 ### Proxy Connetction Settings
 image:ProxySettings.png[]
 
